@@ -48,7 +48,7 @@ gid = grp.uid
 print(gid)
 messages = ''
 oldmessages = ''
-r = re.compile('.*(?:kes|keegi)\s*(?:seltsis|majas)\s*(?:on|ka)\s*\?*')
+r = re.compile('.*(?:(?:kes|keegi)\s*(?:seltsis|majas)\s*(?:on|ka)|on\s*keegi\s*(?:seltsis|majas)|kes\s*preppab)\s*\?*')
 while True:
     messages = client.fetchThreadMessages(thread_id=gid, limit=1)
     newmessages = ''
